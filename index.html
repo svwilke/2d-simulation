@@ -1,0 +1,84 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<title>08145 ACW?</title>
+		<link rel="stylesheet" href="css/main.css" type="text/css" />
+		<script type="text/javascript" src="js/core/main.js"></script>
+		<script type="text/javascript" src="js/core/vector.js"></script>
+		<script type="text/javascript" src="js/core/matrix.js"></script>
+		<script type="text/javascript" src="js/core/time.js"></script>
+		<script type="text/javascript" src="js/core/world.js"></script>
+
+		<script type="text/javascript" src="js/render/graphnode.js"></script>
+		<script type="text/javascript" src="js/render/rendervisitor.js"></script>
+		<script type="text/javascript" src="js/render/group.js"></script>
+		<script type="text/javascript" src="js/render/transform.js"></script>
+		<script type="text/javascript" src="js/render/geometry.js"></script>
+		<script type="text/javascript" src="js/render/style.js"></script>
+		<script type="text/javascript" src="js/render/fill.js"></script>
+		<script type="text/javascript" src="js/render/stroke.js"></script>
+		<script type="text/javascript" src="js/render/rect.js"></script>
+		<script type="text/javascript" src="js/render/circle.js"></script>
+		<script type="text/javascript" src="js/render/sprite.js"></script>
+		<script type="text/javascript" src="js/render/bezier.js"></script>
+		<script type="text/javascript" src="js/render/animation.js"></script>
+
+		<script type="text/javascript" src="js/entity/entity.js"></script>
+		<script type="text/javascript" src="js/entity/collidable_entity.js"></script>
+		<script type="text/javascript" src="js/entity/static_entity.js"></script>
+		<script type="text/javascript" src="js/entity/dynamic_entity.js"></script>
+		<script type="text/javascript" src="js/entity/house.js"></script>
+	    <script type="text/javascript" src="js/entity/sun.js"></script>
+		<script type="text/javascript" src="js/entity/tree.js"></script>
+		<script type="text/javascript" src="js/entity/ball.js"></script>
+		<script type="text/javascript" src="js/entity/obstacle.js"></script>
+		<script type="text/javascript" src="js/entity/circstacle.js"></script>
+		<script type="text/javascript" src="js/entity/spawner.js"></script>
+		<script type="text/javascript" src="js/entity/void.js"></script>
+		<script type="text/javascript" src="js/entity/star.js"></script>
+		<script type="text/javascript" src="js/entity/debris.js"></script>
+		<script type="text/javascript" src="js/entity/cannon.js"></script>
+		<script type="text/javascript" src="js/entity/projectile.js"></script>
+		<script type="text/javascript" src="js/entity/deco.js"></script>
+
+		<script type="text/javascript" src="js/utility/shape.js"></script>
+		<script type="text/javascript" src="js/utility/perlin.js"></script>
+		<script type="text/javascript" src="js/utility/color.js"></script>
+		<script type="text/javascript" src="js/utility/line.js"></script>
+		<script type="text/javascript" src="js/utility/collision.js"></script>
+
+		<script type="text/javascript" src="js/scene/scene.js"></script>
+		<script type="text/javascript" src="js/scene/scene_balls.js"></script>
+		<script type="text/javascript" src="js/scene/scene_void.js"></script>
+		<script type="text/javascript" src="js/scene/scene_forest.js"></script>
+		<script type="text/javascript" src="js/scene/scene_cannon.js"></script>
+    </head>
+    </head>
+	<body>
+		<h1>08145 ACW?</h1>
+		<canvas id="mainCanvas" width="800" height="600">
+			Canvas is not supported by your browser.
+		</canvas>
+		<div class="sidebar">
+			<p><b>Simulation Details</b></p>
+			<p id="fpsCounter">FPS: 00</p>
+			<p id="sceneTitle">Scene: None</p>
+			<p id="integrationDisplay">Intgr.: Simple</p>
+			<p id="entityInfo">Entities: 0, 0, 0</p>
+			<p id="collisionInfo">Collisions: 0 / 0</p>
+		</div>
+		<div class="controlbar">
+			<button id="pauseButton" onclick="togglePause()">Pause Simulation</button>
+			<button onclick="resetSim()">Reload Scene</button>
+			<button onclick="nextIntegration()">Switch Integration Method</button>
+			<br />
+			<input type="checkbox" onchange="toggleFixedTime()">Use Fixed Update</input>
+			<input type="checkbox" onchange="toggleMomentum()">Apply Dynamic Momentum</input>
+			<br />
+			Scene:
+			<select id="sceneDropdown" onchange="changeScene()">
+
+			</select>
+		</div>
+	</body>
+</html>

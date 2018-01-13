@@ -1,0 +1,25 @@
+﻿body {
+    font-family: 'Century Gothic', sans-serif;
+}
+
+canvas {
+	outline: black 3px solid;
+}
+
+.sidebar {
+	position: fixed;
+	top: 65px;
+	display: inline;
+	left: 830px;
+	line-height: 1;
+}
+
+.controlbar {
+	position: fixed;
+	top: 700px;
+	display: inline;
+	left: 10px;
+}
+p {
+	font-size: 14pt;
+}
